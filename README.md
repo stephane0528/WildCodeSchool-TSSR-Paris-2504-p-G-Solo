@@ -1,8 +1,8 @@
-A - Présentation du projet :
+# A - Présentation du projet :
 1. Sujet Choisi :
 
-Serveur 
+
 2. Présentation :
 
-Projet 2 : serveur de flux RSS
+# Projet 2 : 
 3. 
