@@ -1,5 +1,5 @@
 # A - Présentation du projet :
-1. Sujet Choisi :
+1. Sujet Choisi : The scripting project (projet solo)
 
 
 2. Présentation :
