@@ -11,7 +11,8 @@ Présentation :
 Projet 1 : 
 # 3. Objectifs finaux :
 . Mettre en place un scripting pouvant: creer un compte utilisateur local,changé un mot de passe,la suppression de compte d'utilisateut  
-. Mettre en place :un script pouvant ajouté
+. Mettre en place :un script pouvant ajouté à un groupe local et de sortie d'un groupe local
+. creer un script pouvant arrêtté et redemaré l'ordinateur d'un client
 
 # B - Introduction : mise en contexte :
 
