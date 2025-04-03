@@ -4,7 +4,7 @@
 
 2. Présentation :
 
-# Projet 2 : 
+# Projet 2 : The scripting project (projet solo)
 3. 
 Présentation :
 
