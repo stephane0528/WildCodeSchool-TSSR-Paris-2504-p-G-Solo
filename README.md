@@ -19,14 +19,15 @@ Projet 1 :
 # B - Introduction : mise en contexte :
 
 
-# 2. Logiciel :
-
+# 2. Logiciel :  
+Visual Studio Code
 
 # 
 
 
 
-# C. Problèmes techniques rencontrés :
+# C. Problèmes techniques rencontrés :   
+
 
 
 # D .Solutions et alternatives trouvées :
