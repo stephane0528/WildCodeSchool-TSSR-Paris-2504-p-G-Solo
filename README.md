@@ -15,7 +15,8 @@ Projet 1 :
 . creer un script pouvant arrêtté et redemaré l'ordinateur d'un client  
 . un script pouvant nous présenté la date de la derniere connexion d'un ordinateur  
 . un script pouvant montré la version de l'os  
-. un autre pour son espace du disque restant pas sa partion/volume  
+. un autre pour son espace du disque restant pas partion/volume de l'ordinateur d'un client  
+. un script type sur l'ordinateur dun client  
 # B - Introduction : mise en contexte :
 
 
