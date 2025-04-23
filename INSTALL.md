@@ -29,7 +29,8 @@ Langue : US
 Compte utilisateur :  
 root / Azerty1*  
 wilder / Azerty1* (dans le groupe sudo)  
-
+# 2 - Mise en place de la solution sur le serveur  
+## 1 - Préparation de l'environnement  
 
 
 
