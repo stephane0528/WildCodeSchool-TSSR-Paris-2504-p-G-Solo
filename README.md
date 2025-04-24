@@ -19,9 +19,9 @@ Projet 1 :
  **B - Introduction : mise en contexte :**  
 
 
-**2. Logiciel**   
-Visual Studio Code    
-**C. Problèmes techniques rencontrés :**    
-.  Difficulté à utiliser Visual Studio Code.   
- **D .Solutions et alternatives trouvées :**  
+**2. Matériel utiliser**   
+Visual Studio Code,Debian12_Server,Ubuntu24-client,Windows 22-Server,windows 11-Client     
+Il faut être en root pour Debian/Ubuntu et en administrateursur windows server/windows 11 et installé sudo avec les commandes suivantes: 
+# C.
+
 
