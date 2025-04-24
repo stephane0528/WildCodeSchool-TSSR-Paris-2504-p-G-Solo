@@ -1,0 +1,41 @@
+# Demander les informations à l'utilisateur
+$serveur = Read-Host "Adresse du serveur distant (ex: user@ip)"
+$utilisateur = Read-Host "Nom de l'utilisateur à vérifier"
+
+# Créer les informations d'identification
+$securePassword = Read-Host "Entrez le mot de passe de l'utilisateur distant" -AsSecureString
+$cred = New-Object System.Management.Automation.PSCredential ($serveur, $securePassword)
+
+while ($true) {
+    Write-Host "1) Dernière connexion"
+    Write-Host "2) Connexions en cours"
+    Write-Host "3) 5 dernières connexions"
+    Write-Host "4) Quitter"
+    $choix = Read-Host "Choix"
+
+    switch ($choix) {
+        '1' {
+            Invoke-Command -ComputerName $serveur -Credential $cred -ScriptBlock {
+                param($utilisateur)
+                lastlog -u $utilisateur
+            } -ArgumentList $utilisateur
+        }
+        '2' {
+            Invoke-Command -ComputerName $serveur -Credential $cred -ScriptBlock {
+                who
+            }
+        }
+        '3' {
+            Invoke-Command -ComputerName $serveur -Credential $cred -ScriptBlock {
+                param($utilisateur)
+                last -n 5 $utilisateur
+            } -ArgumentList $utilisateur
+        }
+        '4' {
+            break
+        }
+        Default {
+            Write-Host "Choix invalide"
+        }
+    }
+}
