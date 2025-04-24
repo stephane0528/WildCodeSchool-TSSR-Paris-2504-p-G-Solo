@@ -1,0 +1,34 @@
+# Demande l'adresse du serveur distant et les informations d'identification
+$serveur = Read-Host "Adresse du serveur distant (ex: nom_ou_ip)"
+$utilisateur = Read-Host "Nom de l'utilisateur à vérifier"
+$adminRemote = Read-Host "Nom d'utilisateur pour la connexion distante (DOMAIN\Nom ou Nom)"
+$motDePasse = Read-Host "Mot de passe" -AsSecureString
+$credential = New-Object System.Management.Automation.PSCredential($adminRemote, $motDePasse)
+
+while ($true) {
+    Write-Host "==== MENU ===="
+    Write-Host "1) Afficher la dernière connexion de l'utilisateur"
+    Write-Host "2) Quitter"
+    $choix = Read-Host "Choisissez une option"
+
+    switch ($choix) {
+        "1" {
+            Write-Host "Récupération de la dernière connexion pour l'utilisateur '$utilisateur'..."
+            Invoke-Command -ComputerName $serveur -Credential $credential -ScriptBlock {
+                param ($utilisateur)
+                Get-EventLog -LogName Security -InstanceId 4624 -Message "*$utilisateur*" |
+                Sort-Object TimeGenerated -Descending |
+                Select-Object -First 1 |
+                Format-List TimeGenerated, Message
+            } -ArgumentList $utilisateur
+        }
+        "2" {
+            Write-Host "Fin du script."
+            break
+        }
+        Default {
+            Write-Host "Option invalide. Veuillez réessayer."
+        }
+    }
+}
+
