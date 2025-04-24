@@ -1,0 +1,38 @@
+while ($true) {
+    Write-Host ""
+    Write-Host "Que voulez-vous faire ?"
+    Write-Host "1) Arrêter le système distant"
+    Write-Host "2) Redémarrer le système distant"
+    Write-Host "0) Quitter"
+    $choix = Read-Host "Entrez votre choix (1, 2 ou 0)"
+
+    if ($choix -eq "1" -or $choix -eq "2") {
+        $serveur = Read-Host "Adresse IP ou nom du serveur distant"
+        $utilisateur = Read-Host "Nom d'utilisateur (DOMAIN\Nom ou Nom si local)"
+        $motDePasse = Read-Host "Mot de passe" -AsSecureString
+        $credential = New-Object System.Management.Automation.PSCredential($utilisateur, $motDePasse)
+    }
+
+    switch ($choix) {
+        "1" {
+            Write-Host "Arrêt du système distant..."
+            Invoke-Command -ComputerName $serveur -Credential $credential -ScriptBlock {
+                Stop-Computer -Force
+            }
+        }
+        "2" {
+            Write-Host "Redémarrage du système distant..."
+            Invoke-Command -ComputerName $serveur -Credential $credential -ScriptBlock {
+                Restart-Computer -Force
+            }
+        }
+        "0" {
+            Write-Host "Quitter le menu."
+            break
+        }
+        Default {
+            Write-Host "Choix invalide. Veuillez entrer 1, 2 ou 0."
+        }
+    }
+}
+
