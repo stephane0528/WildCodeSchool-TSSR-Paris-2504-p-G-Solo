@@ -3,17 +3,21 @@
 
 
 # . Présentation 
+Ce projet a pour objectif de concevoir un script permettant aux utilisateurs d’exécuter différentes actions ou de collecter des informations sur le système.
 
+Dans un premier temps, deux versions du script seront développées : l’une en PowerShell pour les systèmes Windows, l’autre en Bash pour les environnements Ubuntu. Chacune de ces versions intégrera l’ensemble des fonctionnalités demandées.
+
+Ensuite, nous mettrons en place deux scénarios de travail :
+
+    Le premier mettra en relation un serveur Windows Server avec un client Windows 11.
+
+    Le second se basera sur une communication entre un serveur Ubuntu et un client Ubuntu.
+
+Enfin, les scripts seront transmis depuis les machines serveurs vers les machines clientes, afin de tester leur bon fonctionnement dans chaque contexte
  
-# . Objectifs finaux**
-. Mettre en place un script pouvant :  
-. Créer un compte utilisateur local, changer un mot de passe et supprimer un compte utilisateur. 
-.Ajouter un utilisateur à un groupe local et le retirer d’un groupe local.  
-.Arrêter et redémarrer l’ordinateur d’un client.  
-. Afficher la date de la dernière connexion d’un utilisateur.  
-.Montrer la version du système d’exploitation.  
-. Afficher l’espace disque restant par partition/volume sur l’ordinateur d’un client.  
-. Identifier le type de système d’exploitation sur l’ordinateur d’un client.  
+ 
+# . Objectifs finaux
+
  
 **2. Matériel utiliser**   
 Debian12_Server,Ubuntu24-client,Windows 22-Server,windows 11-Client     
